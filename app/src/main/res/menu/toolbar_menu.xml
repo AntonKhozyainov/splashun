@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toolbar_menu_search"
+        android:icon="@drawable/ic_toolbar_menu_search"
+        android:title="@string/home"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/toolbar_menu_share"
+        android:icon="@drawable/ic_toolbar_menu_share_link"
+        android:title="@string/share_link"
+        app:actionViewClass="androidx.appcompat.widget.AppCompatImageButton"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+</menu>

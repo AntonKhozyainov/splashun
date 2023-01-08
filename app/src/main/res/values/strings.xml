@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Splashun</string>
+    <string name="image">Image</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="home">Home</string>
+    <string name="share_link">Share link</string>
+    <string name="profile">Profile</string>
+    <string name="collections">Collections</string>
+    <string name="onboarding_page_1">Create a photo, publish it, gather an audience, get feedback!</string>
+    <string name="onboarding_page_2">hare with friends, build collections!</string>
+    <string name="onboarding_page_3">Upload your favorite photos and keep track of statistics!</string>
+    <string name="sing_in_button">Sign in with Unsplash</string>
+    <string name="new_collapse_toolbar">New</string>
+    <string name="search_collapse_toolbar">Search</string>
+    <string name="top_collapse_toolbar">Today\'s top</string>
+    <string name="request_collapse_toolbar">At the request of "%1$s"</string>
+    <string name="ribbon">Ribbon</string>
+    <string name="photo">Photo</string>
+    <string name="exif">Made with: %1$s\nModel: %2$s\nExposure: %3$s\nAperture: %4$s\nFocal Length: %5$s\nISO: %6$s</string>
+    <string name="location">%1$s, %2$s</string>
+    <string name="about">About %1$s:\n%2$s</string>
+<!--    <string name="downloads">Download</string>-->
+<!--    <string name="downloads_count"> (%1$s)</string>-->
+            <string name="downloads">Download (%1$s)</string>
+    <string name="no_location">There is no information about the location</string>
+</resources>

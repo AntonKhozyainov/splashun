@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/photoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/authorAvatarImageView"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginVertical="9dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/photoImageView"
+            app:layout_constraintStart_toStartOf="@+id/photoImageView"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/authorFullNameTextView"
+            style="@style/AuthorFullNamePhotoDetailTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintStart_toEndOf="@+id/authorAvatarImageView"
+            app:layout_constraintTop_toTopOf="@+id/authorAvatarImageView"
+            tools:text="@tools:sample/full_names" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/authorNameTextView"
+            style="@style/AuthorNamePhotoDetailTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/authorAvatarImageView"
+            app:layout_constraintStart_toEndOf="@+id/authorAvatarImageView"
+            tools:text="@tools:sample/first_names" />
+
+        <LinearLayout
+            android:id="@+id/likeLayout"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="@+id/photoImageView"
+            app:layout_constraintEnd_toEndOf="@+id/photoImageView">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/likeCountTextView"
+                style="@style/LikesCountPhotoDetailTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="9dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintVertical_bias="1.0"
+                tools:text="138" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/likeImageView"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginVertical="9dp"
+                android:src="@drawable/ic_like_empty" />
+        </LinearLayout>
+
+        <!--        <androidx.constraintlayout.widget.Guideline-->
+        <!--            android:id="@+id/guideline65Percent"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            app:layout_constraintGuide_percent="0.65" />-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/locationImageView"
+            style="@style/IconPhotoDetailStyle"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photoImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/locationTextView"
+            style="@style/PhotoDetailTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/locationImageView"
+            app:layout_constraintTop_toTopOf="@+id/locationImageView"
+            tools:text="San Francisco, CA " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tagsTextView"
+            style="@style/PhotoDetailTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationImageView"
+            tools:text="#woman #model #nature #rights #womanrights" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline50PercentVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/exifTextView"
+            style="@style/PhotoDetailTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline85Percent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline50PercentVertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tagsTextView"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Made with: Canon \nModel: EOS 40D \nExposure: 0.01s \nAperture: 4.970854 \nFocal Length: 37 \nISO: 100" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/aboutTextView"
+            style="@style/PhotoDetailTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline85Percent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline50PercentVertical"
+            app:layout_constraintTop_toBottomOf="@+id/tagsTextView"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="About @alexosesso: Dreamer, creator. Strong man, stronger passion." />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline85Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/downloadImageView"
+            style="@style/IconPhotoDetailStyle"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_download"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline85Percent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/downloadTextView"
+            style="@style/PhotoDetailTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/downloadImageView"
+            app:layout_constraintTop_toTopOf="@+id/guideline85Percent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Download (124)" />
+
+        <TextView
+            android:id="@+id/exceptionTextView"
+            style="@style/textException"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="300dp"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Error error error error error error error error error error error error error "
+            tools:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/ProgressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="300dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
